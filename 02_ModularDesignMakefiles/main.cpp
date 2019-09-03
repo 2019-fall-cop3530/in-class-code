@@ -44,4 +44,5 @@ std::string PrintNumberString ()
 //	std::cout << student_2_lname << ", " << student_2_fname << ": " << student_2_gpa << "\n";
 //	std::cout << student_3_lname << ", " << student_3_fname << ": " << student_4_gpa << "\n";
 //	std::cout << student_4_lname << ", " << student_3_fname << ": " << student_4_gpa << "\n";
+//////////// USE AN ARRAY OF OBJECTS
 //}
