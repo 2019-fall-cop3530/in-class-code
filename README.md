@@ -5,7 +5,7 @@ We will update this continually as the semester progresses, `git pull` often.
 
 ## Command line basics
 * `pwd` - Show the full path to the Present Working Directory.
-* `li` - List the files in the current directory (folder).
+* `ls` - List the files in the current directory (folder).
 * `cd FOO` - Change into the subdirectory named "FOO".
 * `cd ..` - Go up one level in the directory tree.
 * `mv f1 f2` - Moves (renames) file "f1" to "f2".
