@@ -2,6 +2,7 @@
 #define STUDENT_HPP
 
 #include <string>
+#include <sstream>
 
 class Student
 {
@@ -11,5 +12,6 @@ class Student
 		double gpa;
 	public:
 		Student (std::string fn, std::string ln, double gpa);
+		std::string ToString ();
 };
 #endif

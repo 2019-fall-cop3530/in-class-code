@@ -12,6 +12,7 @@ TEST_CASE("First bundle of tests")
 TEST_CASE("Student test")
 {
 	Student s1("Alan", "Turing", 3.87);
+	REQUIRE("Turing, Alan: 3.87" == s1.ToString());
 }
 
 // Compile & run:
