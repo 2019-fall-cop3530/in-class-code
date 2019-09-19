@@ -14,12 +14,12 @@ long long BinarySearch::Find (long long array[], long long right, long long sear
 		else if (array[middle] > searchTerm)
 		{
 			// search left half
-			right = middle;
+			right = middle - 1;
 		}
 		else
 		{
 			// search right half
-			left = middle;
+			left = middle + 1;
 		}
 
 		middle = (left + right) / 2;
