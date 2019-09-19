@@ -7,7 +7,7 @@ CXX = g++
 CXXFLAGS  = -g -Wall -std=c++11
 
 SRC_FILES := $(shell find . -path ./test -prune -o -name "*.cpp" -print)
-OBJECTS = linear_search.o # binary_search.o
+OBJECTS = linear_search.o binary_search.o
 
 # the build target executable:
 TARGET = main
