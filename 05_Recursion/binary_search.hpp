@@ -5,7 +5,7 @@
 class BinarySearch
 {
 	public:
-		static int Find (int[] arr, int length, int searchKey);	
-		static int RecursiveFind (int[] arr, int left, int right, int searchKey);
+		static int Find (int arr[], int length, int searchKey);	
+		static int RecursiveFind (int arr[], int left, int right, int searchKey);
 };
 #endif
