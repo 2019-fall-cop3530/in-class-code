@@ -10,7 +10,7 @@ clean:
 	$(RM) *.o *.gch *.dSYM test/test core main
 
 testBuild: $(OBJECTS)
-	$(CXX) $(CXXFLAGS) -Itest/catch/catch.hpp -o test/test $(OBJECTS) test/test.cpp
+	$(CXX) $(CXXFLAGS) -Itest/catch -o test/test $(OBJECTS) test/test.cpp
 
 test: testBuild
 	test/test --success
