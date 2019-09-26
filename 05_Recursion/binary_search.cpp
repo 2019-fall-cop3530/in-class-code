@@ -9,25 +9,27 @@ int BinarySearch::Find (int arr[], int length, int searchKey)
 int BinarySearch::RecursiveFind (int arr[], int left, int right, int searchKey)
 {
 	int middle = (left + right) / 2;
+	int response = -1;
 
 	if (left > right)
 	{
-		return -1;
+		response = -1;
 	}
-
-	if (arr[middle] == searchKey)
+	else if (arr[middle] == searchKey)
 	{
-		return middle;
+		response = middle;
 	}
 	else if (arr[middle] < searchKey)
 	{
 		// search the right half
 		left = middle + 1;
-		return BinarySearch::RecursiveFind(arr, left, right, searchKey);
+		response = BinarySearch::RecursiveFind(arr, left, right, searchKey);
 	}
 	else
 	{
 		right = middle - 1;
-		return BinarySearch::RecursiveFind(arr, left, right, searchKey);
+		response = BinarySearch::RecursiveFind(arr, left, right, searchKey);
 	}
+
+	return response;
 }
