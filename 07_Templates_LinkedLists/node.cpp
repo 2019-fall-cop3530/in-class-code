@@ -1,8 +1,9 @@
 #include "node.hpp"
 
-Node::Node (int v)
+Node::Node (int v, Node* n)
 {
 	this->data = v;
+	this->next = n;
 }
 
 int Node::GetData ()
