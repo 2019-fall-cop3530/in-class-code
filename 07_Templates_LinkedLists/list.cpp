@@ -10,3 +10,8 @@ void List::InsertAtHead (int v)
 	Node* newNode = new Node(v, this->head);
 	this->head = newNode;
 }
+
+Node* List::GetFront ()
+{
+	return this->head;
+}

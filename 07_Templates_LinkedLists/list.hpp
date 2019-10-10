@@ -9,4 +9,5 @@ class List
 	public:
 		List ();
 		void InsertAtHead (int v);
+		Node* GetFront ();
 };

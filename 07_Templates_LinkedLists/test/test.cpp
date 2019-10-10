@@ -21,6 +21,12 @@ TEST_CASE("List")
 {
 	List l;
 	l.InsertAtHead(4);
+	REQUIRE(4 == l.GetFront()->GetData());
+
+	l.InsertAtHead(6);
+	REQUIRE(6 == l.GetFront()->GetData());
+
+	REQUIRE(4 == l.GetFront()->GetNext()->GetData());
 }
 
 // Compile & run:
