@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -g -std=c++11 -Wall -ftest-coverage -fprofile-arcs
+CXXFLAGS = -g -std=c++11 -Wall
 
 OBJECTS = node.o list.o # file1.o
 
