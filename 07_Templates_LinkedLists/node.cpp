@@ -1,17 +1,22 @@
 #include "node.hpp"
 
-Node::Node (int v, Node* n)
+template <typename T>
+Node<T>::Node (T v, Node<T>* n)
 {
 	this->data = v;
 	this->next = n;
 }
 
-int Node::GetData ()
+template <typename T>
+T Node<T>::GetData ()
 {
 	return this->data;
 }
 
-Node* Node::GetNext ()
+template <typename T>
+Node<T>* Node<T>::GetNext ()
 {
 	return this->next;
 }
+
+template class Node<int>;

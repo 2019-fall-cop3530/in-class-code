@@ -1,12 +1,13 @@
 #pragma once
 
+template <typename T>
 class Node
 {
 	private:
-		int data;
-		Node* next = nullptr;
+		T data;
+		Node<T>* next = nullptr;
 	public:
-		Node (int v, Node* next = nullptr);
-		int GetData ();
-		Node* GetNext ();
+		Node (T v, Node<T>* next = nullptr);
+		T GetData ();
+		Node<T>* GetNext ();
 };
