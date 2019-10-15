@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall -ftest-coverage -fprofile-arcs
+CXXFLAGS = -g -std=c++11 -Wall -ftest-coverage -fprofile-arcs
 
 OBJECTS = # file1.o
 
