@@ -27,6 +27,11 @@ TEST_CASE("List")
 	REQUIRE(6 == l.GetFront()->GetData());
 
 	REQUIRE(4 == l.GetFront()->GetNext()->GetData());
+
+	l.DeleteFromHead();
+	l.DeleteFromHead();
+	l.DeleteFromHead();
+	l.DeleteFromHead();
 }
 
 // Compile & run:

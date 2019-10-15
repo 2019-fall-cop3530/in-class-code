@@ -19,4 +19,15 @@ Node<T>* List<T>::GetFront ()
 	return this->head;
 }
 
+template <typename T>
+void List<T>::DeleteFromHead ()
+{
+	if (nullptr != this->head)
+	{
+		Node<T>* garbage = this->head;
+		this->head = this->head->GetNext();
+		delete garbage;
+	}
+}
+
 template class List<int>;
