@@ -1,17 +1,22 @@
 #include "list.hpp"
 
-List::List ()
+template <typename T>
+List<T>::List ()
 {
 	this->head = nullptr;
 }
 
-void List::InsertAtHead (int v)
+template <typename T>
+void List<T>::InsertAtHead (T v)
 {
-	Node* newNode = new Node(v, this->head);
+	Node<T>* newNode = new Node<T>(v, this->head);
 	this->head = newNode;
 }
 
-Node* List::GetFront ()
+template <typename T>
+Node<T>* List<T>::GetFront ()
 {
 	return this->head;
 }
+
+template class List<int>;

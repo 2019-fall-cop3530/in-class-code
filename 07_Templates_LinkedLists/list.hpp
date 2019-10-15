@@ -1,13 +1,14 @@
 #pragma once
 #include "node.hpp"
 
+template <typename T>
 class List
 {
 	private:
-		Node* head;
+		Node<T>* head;
 
 	public:
 		List ();
-		void InsertAtHead (int v);
-		Node* GetFront ();
+		void InsertAtHead (T v);
+		Node<T>* GetFront ();
 };
