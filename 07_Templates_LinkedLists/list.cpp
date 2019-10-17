@@ -7,6 +7,19 @@ List<T>::List ()
 }
 
 template <typename T>
+List<T>::~List ()
+{
+	Node<T>* currentNode = this->head;
+
+	while (currentNode != nullptr)
+	{
+		this->head = this->head->GetNext();
+		delete currentNode;
+		currentNode = this->head;
+	}
+}
+
+template <typename T>
 void List<T>::InsertAtHead (T v)
 {
 	Node<T>* newNode = new Node<T>(v, this->head);

@@ -15,6 +15,9 @@ TEST_CASE("Node")
 	REQUIRE(7 == n2->GetData());
 	REQUIRE(n == n2->GetNext());
 	REQUIRE(12 == n2->GetNext()->GetData());
+
+	delete n;
+	delete n2;
 }
 
 TEST_CASE("List")
@@ -29,9 +32,11 @@ TEST_CASE("List")
 	REQUIRE(4 == l.GetFront()->GetNext()->GetData());
 
 	l.DeleteFromHead();
-	l.DeleteFromHead();
-	l.DeleteFromHead();
-	l.DeleteFromHead();
+
+	// commenting out the lines below uncovers the memory leak since list didn't have a destructor.
+	// l.DeleteFromHead();
+	// l.DeleteFromHead();
+	// l.DeleteFromHead();
 }
 
 // Compile & run:
