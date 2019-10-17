@@ -9,6 +9,7 @@ class List
 
 	public:
 		List ();
+		~List ();
 		void InsertAtHead (T v);
 		void DeleteFromHead ();
 		Node<T>* GetFront ();
