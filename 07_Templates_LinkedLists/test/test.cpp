@@ -32,6 +32,11 @@ TEST_CASE("List")
 	REQUIRE(4 == l.GetFront()->GetNext()->GetData());
 
 	l.DeleteFromHead();
+<<<<<<< HEAD
+=======
+
+	// commenting out the lines below uncovers the memory leak since list didn't have a destructor.
+>>>>>>> b0466b258353863f82b2c2aa7d6bb703adfdcd34
 	// l.DeleteFromHead();
 	// l.DeleteFromHead();
 	// l.DeleteFromHead();
