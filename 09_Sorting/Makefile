@@ -8,10 +8,12 @@ main: $(OBJECTS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 clean:
-	$(RM) *.o *.gch *.dSYM test/test core main
+	rm -rf main.dSYM
+	$(RM) *.o *.gc* test/*.o test/*.gc* *.dSYM test/test core main
 
-testBuild: $(OBJECTS)
-	$(CXX) $(CXXFLAGS) -Itest/catch -o test/test $(OBJECTS) test/test.cpp
+testBuild: $(OBJECTS) test/test.o
+	$(CXX) $(CXXFLAGS) -o test/test $^
 
 test: testBuild
-	test/test --success
+	$(RM) *.gcda *.gcov test/*.gcda test/*.gcov
+	test/test
