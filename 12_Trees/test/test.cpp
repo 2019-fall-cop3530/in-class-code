@@ -18,6 +18,8 @@ TEST_CASE("Node")
 	n.SetRight(right);
 	REQUIRE(right == n.GetRight());
 
+	delete left;
+	delete right;
 }
 
 // Compile & run:
