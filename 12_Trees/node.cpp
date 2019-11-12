@@ -12,8 +12,22 @@ int Node::GetData()
 	return this->payload;
 }
 
-void SetLeft(Node* newLeft);
-Node* GetLeft();
+void Node::SetLeft(Node* newLeft)
+{
+	this->left = newLeft;
+}
 
-void SetRight(Node* newRight);
-Node* GetRight();
+Node* Node::GetLeft()
+{
+	return this->left;
+}
+
+void Node::SetRight(Node* newRight)
+{
+	this->right = newRight;
+}
+
+Node* Node::GetRight()
+{
+	return this->right;
+}
