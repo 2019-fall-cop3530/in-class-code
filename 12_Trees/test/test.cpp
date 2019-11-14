@@ -26,8 +26,14 @@ TEST_CASE("Node")
 TEST_CASE("Tree Insert")
 {
 	Tree t;
+	t.Insert(2);
+	REQUIRE(2 == t.GetRoot()->GetData());
+
 	t.Insert(12);
-	REQUIRE(12 == t.GetRoot()->GetData());
+	REQUIRE(12 == t.GetRoot()->GetRight()->GetData());
+
+	t.Insert(8);
+	REQUIRE(8 == t.GetRoot()->GetRight()->GetLeft()->GetData());
 }
 
 // Compile & run:
