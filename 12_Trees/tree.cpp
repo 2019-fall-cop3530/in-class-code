@@ -5,6 +5,24 @@ Tree::Tree ()
 	this->root = nullptr;
 }
 
+Tree::~Tree ()
+{
+	this->DeleteSubTree(this->root);
+}
+
+void Tree::DeleteSubTree (Node* subtreeRoot)
+{
+	if (subtreeRoot == nullptr)
+	{
+		return;
+	}
+
+	this->DeleteSubTree(subtreeRoot->GetLeft());
+	this->DeleteSubTree(subtreeRoot->GetRight());
+
+	delete subtreeRoot;
+}
+
 void Tree::Insert (int value)
 {
 	Node* newNode = new Node(value);

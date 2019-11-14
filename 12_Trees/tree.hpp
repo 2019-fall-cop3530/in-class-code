@@ -8,6 +8,7 @@ class Tree
 {
 	public:
 		Tree ();
+		~Tree ();
 		void Insert (int value);
 		Node* GetRoot ();
 		std::string PrintTree ();
@@ -15,4 +16,5 @@ class Tree
 	
 	private:
 		Node* root;
+		void DeleteSubTree (Node* subtreeRoot);
 };
