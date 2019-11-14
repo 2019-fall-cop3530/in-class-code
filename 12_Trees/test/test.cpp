@@ -2,6 +2,7 @@
 
 #include "catch/catch.hpp"
 #include "../node.hpp"
+#include "../tree.hpp"
 
 TEST_CASE("Node")
 {
@@ -20,6 +21,13 @@ TEST_CASE("Node")
 
 	delete left;
 	delete right;
+}
+
+TEST_CASE("Tree Insert")
+{
+	Tree t;
+	t.Insert(12);
+	REQUIRE(12 == t.GetRoot()->GetData());
 }
 
 // Compile & run:
