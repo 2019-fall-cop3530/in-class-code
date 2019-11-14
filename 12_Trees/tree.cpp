@@ -45,3 +45,27 @@ Node* Tree::GetRoot ()
 {
 	return this->root;
 }
+
+
+std::string Tree::PrintTree ()
+{
+	return this->RecursivePrintTree(this->root);
+}
+
+std::string Tree::RecursivePrintTree (Node* subtreeRoot)
+{
+	if (subtreeRoot == nullptr)
+	{
+		return "";
+	}
+
+	std::ostringstream printedTree;
+
+	printedTree << this->RecursivePrintTree(subtreeRoot->GetLeft());
+
+	printedTree << subtreeRoot->GetData() << " ";
+
+	printedTree << this->RecursivePrintTree(subtreeRoot->GetRight());
+
+	return printedTree.str();
+}
