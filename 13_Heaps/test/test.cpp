@@ -1,11 +1,16 @@
 #define CATCH_CONFIG_MAIN
 
 #include "../../test/catch/catch.hpp"
-//#include "../file1.hpp"
+#include "../heap.hpp"
 
-TEST_CASE("First bundle of tests")
+TEST_CASE("Relative pointers")
 {
-	REQUIRE(true == true);
+	// calculat parent
+	Heap h;
+	REQUIRE(2 == h.GetParentID (6));
+	REQUIRE(2 == h.GetParentID (5));
+	// right child
+	// left child
 }
 
 // Compile & run:
