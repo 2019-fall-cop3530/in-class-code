@@ -13,5 +13,22 @@ TEST_CASE("Relative pointers")
 	REQUIRE(1 == h.GetLeftChild (0));
 }
 
-// Compile & run:
-// make clean test
+TEST_CASE ("Swap")
+{
+	Heap h;
+	// insert dummy data
+	// run swap
+	//compare
+	//REQUIRE();
+}
+
+TEST_CASE ("Insert")
+{
+	Heap h;
+	h.Insert(12);
+	h.Insert(21);
+	h.Insert(2);
+	h.Insert(14);
+
+	REQUIRE(2 == h.Peek());
+}
