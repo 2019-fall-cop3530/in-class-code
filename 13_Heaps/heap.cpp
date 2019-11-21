@@ -47,3 +47,41 @@ int Heap::Peek ()
 {
 	return this->data.at(0);
 }
+
+int Heap::Pop ()
+{
+	int result = this->data.at(0);
+	this->Swap(0, this->data.size() - 1);
+	this->data.pop_back();
+
+	int nodeID = 0;
+
+	while (true)
+	{
+		int leftChild = this->GetLeftChild(nodeID);
+		if (leftChild >= this->data.size())
+		{
+			break;
+		}
+		if (leftChild + 1 != this->data.size())
+		{
+			// has right child
+			if (this->data.at(leftChild) > this->data.at(leftChild + 1))
+			{
+				++leftChild;
+			}
+		}
+
+		if (this->data.at(nodeID) > this->data.at(leftChild))
+		{
+			this->Swap(nodeID, leftChild);
+			nodeID = leftChild;
+		}
+		else
+		{
+			break;
+		}
+	}
+
+	return result;
+}

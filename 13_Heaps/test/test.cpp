@@ -31,4 +31,7 @@ TEST_CASE ("Insert")
 	h.Insert(14);
 
 	REQUIRE(2 == h.Peek());
+
+	REQUIRE(2 == h.Pop());
+	REQUIRE(12 == h.Peek());
 }

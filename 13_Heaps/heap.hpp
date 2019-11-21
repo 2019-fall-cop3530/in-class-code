@@ -11,4 +11,5 @@ class Heap
 		void Swap (int a, int b);
 		void Insert (int value);
 		int Peek ();
+		int Pop ();
 };
