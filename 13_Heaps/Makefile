@@ -10,8 +10,9 @@ main: $(OBJECTS)
 clean:
 	$(RM) *.o *.gc* *.dSYM test/test core main
 
-testBuild: $(OBJECTS)
-	$(CXX) $(CXXFLAGS) -Itest/catch -o test/test $(OBJECTS) test/test.cpp
+testBuild: $(OBJECTS) test/test.o
+	$(CXX) $(CXXFLAGS) -o test/test $^
 
 test: testBuild
+	$(RM) *.gcda *.gcov test/*.gcda test/*.gcov
 	test/test --success
