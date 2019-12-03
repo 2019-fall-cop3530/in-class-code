@@ -7,4 +7,5 @@ class Graph
 		bool** adjacencies;
 	public:
 		Graph(std::string input);
+		bool HasEdge (int i, int j);
 };

@@ -30,7 +30,12 @@ Graph::Graph(std::string input)
 		}
 		else
 		{
-			this->adjacencies[row][column] = (input.at(i) == '1');
+			this->adjacencies[row][column++] = (input.at(i) == '1');
 		}
 	}
+}
+
+bool Graph::HasEdge (int i, int j)
+{
+	return this->adjacencies[i][j];
 }
